@@ -13,17 +13,13 @@ const images = [
   },
 ];
 
-const galleryList = document.querySelector(`.gallery`);
+const galleryList = document.querySelector('.gallery');
 
-let galleryMarkup = ``;
+const galleryMarkup = images.reduce((accumulator, image) => {
+  return accumulator + `<li class="gallery__item"> <img src="${image.url}" alt="${image.alt}" class="gallery__img" style="width: 300px; height: 300px;"> </li>`;
+}, '');
 
-images.forEach((image) => {
-  galleryMarkup += `<li class="gallery__item"> <img src="${image.url}" alt="${image.alt}" class="gallery__img"> </li>` ;
-  });
-  
-
- 
-galleryList.insertAdjacentHTML(`beforeend`, galleryMarkup);
+galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
 
 console.log(galleryList);
 
