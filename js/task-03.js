@@ -16,7 +16,7 @@ const images = [
 const galleryList = document.querySelector('.gallery');
 
 const galleryMarkup = images.reduce((accumulator, image) => {
-  return accumulator + `<li class="gallery__item"> <img src="${image.url}" alt="${image.alt}" class="gallery__img" style="width: 300px; height: 300px;"> </li>`;
+  return accumulator + `<li class="gallery__item"> <img src="${image.url}" alt="${image.alt}" class="gallery__img" style="width: 400px; height: 300px;"> </li>`;
 }, '');
 
 galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
